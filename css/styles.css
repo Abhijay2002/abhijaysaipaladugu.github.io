@@ -826,6 +826,12 @@ header {
     line-height: 1.8;
 }
 
+.project-description li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
 /* Year section styles */
 .year-section {
     margin-bottom: 4rem;

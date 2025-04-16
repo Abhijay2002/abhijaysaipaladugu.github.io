@@ -832,6 +832,14 @@ header {
     padding-left: 1.5rem;
 }
 
+.project-description li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
 /* Year section styles */
 .year-section {
     margin-bottom: 4rem;

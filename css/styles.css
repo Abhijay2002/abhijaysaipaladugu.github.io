@@ -923,30 +923,35 @@ header {
 }
 
 .skill-list li {
-    margin-bottom: 1rem;
     position: relative;
+    margin-bottom: 1rem;
     padding-left: 1.5rem;
-}
-
-.skill-list li:before {
+  }
+  
+  .skill-list li::before {
     content: "→";
     position: absolute;
     left: 0;
     color: var(--primary-color);
-}
-
-.skill-list li::after {
+  }
+  
+  .skill-list li::after {
     content: '';
     display: block;
     height: 6px;
-    background-color: var(--primary-color);
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
     border-radius: 3px;
     margin-top: 5px;
-    width: 0;
-    /* transition: width 1s ease-in-out; */
-}
+    width: 0;                              /* start collapsed */
+    transition: width 1s var(--animation-curve);
+  }
+  
+  /* when JS sets --skill-width and adds .animated … */
+  .skill-list li.animated::after {
+    width: var(--skill-width);
+  }
 
-.skill-category:hover .skill-list li::after {
+/* .skill-category:hover .skill-list li::after {
     width: calc(attr(data-skill) * 1%);
 }
 
@@ -955,7 +960,7 @@ header {
 .skill-list li[data-skill="85"]::after { max-width: 85%; }
 .skill-list li[data-skill="80"]::after { max-width: 80%; }
 .skill-list li[data-skill="75"]::after { max-width: 75%; }
-.skill-list li[data-skill="70"]::after { max-width: 70%; }
+.skill-list li[data-skill="70"]::after { max-width: 70%; } */
 
 /* Contact Section */
 #contact {

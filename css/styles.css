@@ -943,7 +943,7 @@ header {
     border-radius: 3px;
     margin-top: 5px;
     width: 0;
-    transition: width 1s ease-in-out;
+    /* transition: width 1s ease-in-out; */
 }
 
 .skill-category:hover .skill-list li::after {

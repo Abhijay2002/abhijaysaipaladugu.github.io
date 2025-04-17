@@ -123,7 +123,7 @@ section {
     color: var(--primary-color);
 }
 
-/* .section-title:after {
+.section-title:after {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -133,7 +133,7 @@ section {
     height: 4px;
     background-color: var(--primary-color);
     border-radius: 2px;
-} */
+}
 
 .btn {
     display: inline-block;
@@ -393,7 +393,7 @@ header {
 }
 
 /* Glitch effect */
-.glitch-text {
+/* .glitch-text {
     position: relative;
 }
 
@@ -446,7 +446,7 @@ header {
     100% {
         transform: translate(0);
     }
-}
+} */
 
 .hero-content h2 {
     font-size: 1.8rem;

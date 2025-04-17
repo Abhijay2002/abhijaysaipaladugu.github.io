@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize scroll to top button
     initializeScrollToTop();
     
-    // Initialize contact form
-    initializeContactForm();
+    // // Initialize contact form
+    // initializeContactForm();
 
     // Skills bar animation on scroll
     initializeSkillsBars();

@@ -12,36 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="js/main.js" defer></script>
 </head>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("qyjP0rdv9ySqu_Q0A"); // Replace with your EmailJS public key
-  })();
-
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const form = this;
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-    emailjs.sendForm('service_q0ig3zu', 'template_3od9qq9', form)
-      .then(() => {
-        showFormMessage('Your message was sent successfully!', 'success');
-        form.reset();
-      }, (error) => {
-        showFormMessage('Oops! Something went wrong. Try again later.', 'error');
-        console.error('EmailJS error:', error);
-      })
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      });
-  });
-</script>
 <body>
     <!-- Theme Toggle Button -->
     <div class="theme-toggle">
@@ -557,6 +527,36 @@
                 });
             }, 500);
         });
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("qyjP0rdv9ySqu_Q0A"); // Replace with your EmailJS public key
+      })();
+    
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+    
+        const form = this;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+    
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    
+        emailjs.sendForm('service_q0ig3zu', 'template_3od9qq9', form)
+          .then(() => {
+            alert('Your message was sent successfully!', 'success');
+            form.reset();
+          }, (error) => {
+            alert('Oops! Something went wrong. Try again later.', 'error');
+            console.error('EmailJS error:', error);
+          })
+          .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+          });
+      });
     </script>
 </body>
 </html>

@@ -190,26 +190,26 @@ function initializeAnimations() {
     }
 
     // Animate skill bars on scroll
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const skillListItems = entry.target.querySelectorAll('.skill-list li');
-                skillListItems.forEach((item, index) => {
-                    setTimeout(() => {
-                        const skill = item.getAttribute('data-skill');
-                        if (skill) {
-                            item.style.setProperty('--skill-width', `${skill}%`);
-                            item.classList.add('animated');
-                        }
-                    }, index * 100);
-                });
-            }
-        });
-    }, { threshold: 0.5 });
+    // const skillObserver = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             const skillListItems = entry.target.querySelectorAll('.skill-list li');
+    //             skillListItems.forEach((item, index) => {
+    //                 setTimeout(() => {
+    //                     const skill = item.getAttribute('data-skill');
+    //                     if (skill) {
+    //                         item.style.setProperty('--skill-width', `${skill}%`);
+    //                         item.classList.add('animated');
+    //                     }
+    //                 }, index * 100);
+    //             });
+    //         }
+    //     });
+    // }, { threshold: 0.5 });
 
-    document.querySelectorAll('.skill-category').forEach(category => {
-        skillObserver.observe(category);
-    });
+    // document.querySelectorAll('.skill-category').forEach(category => {
+    //     skillObserver.observe(category);
+    // });
 }
 
 // Initialize particles.js

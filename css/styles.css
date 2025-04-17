@@ -951,6 +951,31 @@ header {
     width: var(--skill-width);
   }
 
+
+/* .skill-list li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.skill-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.skill-list li::after {
+    content: '';
+    display: block;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    margin-top: 5px;
+    width: 0;
+    /* transition: width 1s ease-in-out; 
+} */
+
 /* .skill-category:hover .skill-list li::after {
     width: calc(attr(data-skill) * 1%);
 }
